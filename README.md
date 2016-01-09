@@ -1,6 +1,8 @@
 # Palindrome
 This program uses recursion to determine if a word is a palindrome or not.
 
+The Palindrome class tests the palindrome method (that is below the class).
+
 import java.util.Scanner;
 
 public class Palindrome {
