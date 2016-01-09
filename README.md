@@ -1,2 +1,35 @@
 # Palindrome
 This program uses recursion to determine if a word is a palindrome or not.
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+    public static void main (String [] args){
+        String it;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Input the line position that you would like printed out: ");
+        
+        it = scan.nextLine();
+
+        if (palindrome(it) == true) System.out.println("This is a palindrome.");
+        else System.out.println("This is not a palidrome");
+        
+    }
+
+    public static boolean palindrome(String s) {
+        
+        boolean ans;
+        
+        int n = s.length()-1;
+        
+        if (s.length() < 2) return true;
+
+        if (s.charAt(0) != s.charAt(n)) return false;
+
+        ans = palindrome(s.substring(1, n));
+        
+        return ans;
+    }
+}
+   
